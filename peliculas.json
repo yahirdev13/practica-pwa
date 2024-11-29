@@ -1,0 +1,64 @@
+{
+  "peliculas": [
+    {
+      "id": 1,
+      "nombre": "Iron Man",
+      "director": "Jon Favreau",
+      "clasificacion": "Acción"
+    },
+    {
+      "id": 2,
+      "nombre": "El Caballero de la Noche",
+      "director": "Christopher Nolan",
+      "clasificacion": "Acción"
+    },
+    {
+      "id": 3,
+      "nombre": "Spider-Man: Homecoming",
+      "director": "Jon Watts",
+      "clasificacion": "Acción"
+    },
+    {
+      "id": 4,
+      "nombre": "Black Panther",
+      "director": "Ryan Coogler",
+      "clasificacion": "Acción"
+    },
+    {
+      "id": 5,
+      "nombre": "Avengers: Endgame",
+      "director": "Anthony y Joe Russo",
+      "clasificacion": "Acción"
+    },
+    {
+      "id": 6,
+      "nombre": "Aquaman",
+      "director": "James Wan",
+      "clasificacion": "Acción"
+    },
+    {
+      "id": 7,
+      "nombre": "Guardians of the Galaxy",
+      "director": "James Gunn",
+      "clasificacion": "Acción"
+    },
+    {
+      "id": 8,
+      "nombre": "Wonder Woman",
+      "director": "Patty Jenkins",
+      "clasificacion": "Acción"
+    },
+    {
+      "id": 9,
+      "nombre": "Captain Marvel",
+      "director": "Anna Boden y Ryan Fleck",
+      "clasificacion": "Acción"
+    },
+    {
+      "id": 10,
+      "nombre": "Batman v Superman: Dawn of Justice",
+      "director": "Zack Snyder",
+      "clasificacion": "Acción"
+    }
+  ]
+}

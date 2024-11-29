@@ -2,8 +2,6 @@ fetch('https://reqres.in/api/users')
   .then(response => response.json())
   .then(data => {
 
-
-
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('../service-worker.js')
         .then((reg) => {
@@ -38,13 +36,39 @@ fetch('https://reqres.in/api/users')
     document.getElementById("datosregistrados").innerHTML = tab;
   });
 
-function Enviar() {
+// Inicializar PouchDB
+const db = new PouchDB('MiPrimerDB_YahirDiaz');
 
+// Función para obtener datos desde la API y guardarlos en PouchDB
+function fetchData() {
+  fetch('/api/data')
+    .then(response => response.json())
+    .then(data => {
+      // Guardar los datos en la base de datos local
+      db.put({
+        _id: 'data',
+        message: data.message
+      }).then(() => {
+        // Actualizar la UI con los datos almacenados
+        document.getElementById('titulo').innerText = data.message;
+      });
+    })
+    .catch(err => {
+      console.error('Error al obtener datos:', err);
+
+      // Si ocurre un error, intentar obtener los datos del cache (PouchDB)
+      db.get('data').then(doc => {
+        document.getElementById('titulo').innerText = doc.message;
+      }).catch(error => {
+        document.getElementById('titulo').innerText = 'No se pudieron cargar los datos.';
+      });
+    });
 }
 
+// Llamamos a la función para cargar los datos
+fetchData();
+
 async function Registrar() {
-
-
 
   let data = {
     id: Date.now(),
